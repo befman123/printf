@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 	{
 		if (*(format + i) == '%')
 		{
-                        prv = '%';
+			prv = '%';
 			continue;
 		}
 		if (prv == '%' && *(format + i) == 's')
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 		}
 		else if (prv == '%' && *(format + i) == 'c')
 		{
-                        l = l + _print_char((char)va_arg(args, int));
+			l = l + _print_char((char)va_arg(args, int));
 			prv = '\0';
 		}
 		else
